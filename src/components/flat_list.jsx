@@ -3,7 +3,7 @@ import Flat from './flat';
 
 const FlatList = (props) => {
   const renderList = () => {
-    return props.flats.map((flat, index)) => {
+    return props.flats.map((flat, index) => {
       return (
         <Flat
           flat={flat}
@@ -21,6 +21,6 @@ const FlatList = (props) => {
       {renderList()}
     </div>
   );
-}
+};
 
 export default FlatList;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import GoogleMapReact from 'google-map-react';
+import GoogleMapReact from 'google-map-react';
 
 import flats from '../../data/flats';
 import FlatList from './flat_list';
@@ -13,12 +13,12 @@ class App extends Component {
     };
   }
 
-  // center() {
-  //   return {
-  //     lat: 59.95,
-  //     lng: 30.33
-  //   };
-  // }
+  center() {
+    return {
+      lat: this.state.selectedFlat.lat,
+      lng: this.state.selectedFlat.lng
+    };
+  }
 
   selectFlat = (index) => {
     this.setState({ selectedFlat: flats[index] });
@@ -35,6 +35,8 @@ class App extends Component {
           />
         </div>
         <div className="map-container">
+          <GoogleMapReact defaultCenter={this.center()} defaultZoom={12}>
+          </GoogleMapReact>
         </div>
       </div>
     );
