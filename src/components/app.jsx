@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import GoogleMapReact from 'google-map-react';
 
 class App extends Component {
   constructor(props) {
@@ -8,6 +9,13 @@ class App extends Component {
       // flats
     };
   }
+
+  // center() {
+  //   return {
+  //     lat: 59.95,
+  //     lng: 30.33
+  //   };
+  // }
 
   render() {
     return (
